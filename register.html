@@ -4,29 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/practice.css">
+    <link rel="stylesheet" href="Styles/mystyles.css">
     <title>The Fashion Pet</title>
 </head>
 <body>
     <header>
-        <h1>The Fashion Pet</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="register.html">Register</a>
-        </nav>
-    </header>
+        <header id="header-container">
+            <div>
+                <h1 id="title-site">The Fashion Pet</h1>
+            </div>
+            <div>
+                <nav id="menu-site">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
     <main>
+        <!---
+        Create a form with the inputs: gender, breed, service(Select)
+        -->
+        <div id="form">
+            <form action="">
+                <div class="mb-3">
+                    <label for="" id="lb-name">Name:</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="mb-3">
+                    <label for="" id="lb-age">Age:</label>
+                    <input type="text" name="age" id="age">
+                </div>
+                <div class="mb-3">
+                    <label for="" id="lb-gender">Gender:</label>
+                    <input type="text" name="gender" id="gender">
+                </div>
+                <div class="mb-3">
+                    <label for="" id="lb-breed">Breed</label>
+                    <input type="text" name="breed" id="breed">
+                </div>
+                <div class="mb-3">
+                    <label for="">Service</label>
+                    <select name="services" id="services">
+                        <option value="" disabled selected>--Select an option--</option>></option>
+                        <option value="shower">Shower</option>
+                        <option value="grooming">Grooming</option>
+                        <option value="vaccines">Vaccines</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn" onclick="register();">Register</button>
+            </form>
+        </div>
+
         <div id="pets">
-            
+
         </div>
         <div id="homework">
 
         </div>
     </main>
-    <!-- <script src="Scripts/register.js"></script> -->
-    <script src="Scripts/homeworkAssig1.js"></script>
-    
+    <footer id="footer-container">
+        <p id="copyR-text">Copyright © 2023 The Fashion Pet</p>
+    </footer>
+    <script src="Scripts/register.js"></script>
+    <!-- <script src="Scripts/homeworkAssig1.js"></script> -->
+
 </body>
 </html>
