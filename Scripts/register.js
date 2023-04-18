@@ -37,6 +37,7 @@ let petSalon = {
     ]
 }
 
+
 function displayPetNames(){
     for(let i=0; i<petSalon.pets.length; i++){
         divPets.innerHTML+=`<div class='student'>
@@ -50,5 +51,4 @@ function displayPetNames(){
 function init(){
     displayPetNames();
 }
-
 window.onload=init;
