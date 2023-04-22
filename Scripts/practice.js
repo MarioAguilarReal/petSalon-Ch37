@@ -15,4 +15,10 @@ let student2 = new Student('Rafael', 23, 'Male');
 
 array.push(student, student1, student2);
 
+// let p = document.createElement('p');
+// p.textContent= 'something';
+// document.getElementById('pets').appendChild(p);
 
+// console.log(p);
+
+document.getElementById('pets').innerHTML='<p>Something</p>';

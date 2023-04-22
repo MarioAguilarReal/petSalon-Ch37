@@ -38,9 +38,7 @@ body{
     color:#0b76a6;
 }
 
-#menu-site{
 
-}
     #menu-site ul{
         margin: 0;
         padding: 0;
@@ -116,4 +114,53 @@ input, select{
 }
 .error{
     background-color: red;
+}
+
+#pets{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 1rem;
+}
+
+.pet{
+    border: 1px solid #000000;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 1rem;
+}
+.pet h5{
+    font-size: 260x;
+}
+.pet p{
+    font-size: 12px;
+}
+.green-bar{
+background-color: green;
+color:White;
+padding: 10px;
+font-size: 20px;
+font-weight: 600;
+}
+
+#counter{
+    background-color: #000000;
+    padding: 20px;
+}
+
+#table th, #table td{
+    padding: 10px;
+    border: solid 2px;
+}
+#table{
+    width: 80%;
+    margin-bottom: 50px;
+    border:solid 2px;
+}
+#table caption{
+    border: solid 2px;
+}
+
+#table-container{
+    display: grid;
+    place-items: center;
 }

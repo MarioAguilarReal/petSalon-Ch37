@@ -28,7 +28,10 @@
         <!---
         Create a form with the inputs: gender, breed, service(Select)
         -->
+        <div id="counter"></div>
         <div id="form">
+            <div id="alertDiv"></div>
+            <h2>REGISTER A NEW PET</h2>
             <form action="">
                 <div class="mb-3">
                     <label for="" id="lb-name">Name:</label>
@@ -53,17 +56,32 @@
                         <option value="shower">Shower</option>
                         <option value="grooming">Grooming</option>
                         <option value="vaccines">Vaccines</option>
+                        <option value="nail">Nail triming</option>
                     </select>
                 </div>
 
-                <button type="submit" class="btn" onclick="register();">Register</button>
+                <button type="button" class="btn" onclick="register();">Register</button>
             </form>
+        </div>
+        <div id="table-container">
+            <table id="table" >
+                <caption>Tabla de clientes</caption>
+                <thead id="table-head">
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Breed</th>
+                        <th>Service</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+    
+                </tbody>
+            </table>
         </div>
 
         <div id="pets">
-
-        </div>
-        <div id="homework">
 
         </div>
     </main>
@@ -71,7 +89,7 @@
         <p id="copyR-text">Copyright © 2023 The Fashion Pet</p>
     </footer>
     <script src="Scripts/register.js"></script>
-    <!-- <script src="Scripts/homeworkAssig1.js"></script> -->
+    <script src="Scripts/displayPet.js"></script>
 
 </body>
 </html>
