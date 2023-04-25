@@ -1,20 +1,21 @@
 const tableBody = document.getElementById('table-body');
+const dropdown = document.getElementById('cardsDiv');
 
 
 function putBg(service) {
-    console.log(service)
+    // console.log(service)
     let color;
     if (service == 'Grooming') {
-        color = '#d34a23';
+        color = '#ec92b8';
 
     } else if (service == 'Vaccines') {
-        color = '#ab1333';
+        color = '#b900d6';
 
     } else if (service == 'Nail triming') {
-        color = '#8cc5fa';
+        color = '#9ad600';
 
     } else if (service == 'Shower') {
-        color = '#dfa133';
+        color = '#0b76a6';
 
     }
     return color;
@@ -28,10 +29,10 @@ function displayPetCards() {
         let color = "";
         let pet = petSalon.pets[i];
         color = putBg(pet.service);
-        console.log(pet)
+        //console.log(pet)
         //create template
         card += `
-        <div class="pet" style="background-color:${color}">
+        <div class="pet" id="${pet.id}" style="background-color:${color}">
             <h5>Name: ${pet.name}</h5>
             <hr>
             <p>Age: ${pet.age}</p>
@@ -55,14 +56,23 @@ function displayTable() {
         let pet = petSalon.pets[i];
         color = putBg(pet.service);
         tableInfo += `
-        <tr style="background-color:${color}">
+        <tr id="${pet.id + 'table'}" style="background-color:${color}">
             <td>${pet.name}</td>
             <td>${pet.age}</td>
             <td>${pet.gender}</td>
             <td>${pet.breed}</td>
             <td>${pet.service}</td>
+            <td onclick="deletePet(${pet.id})" id="button-delete">Delete</td>
         </tr>
             `;
     }
     tableBody.innerHTML = tableInfo;
+}
+
+function toggleDropdown() {
+    if (dropdown.style.display === 'none') {
+        dropdown.style.display = 'block';
+    } else {
+        dropdown.style.display = 'none';
+    }
 }

@@ -1,88 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles/mystyles.css">
+    <link rel="stylesheet" href="Styles/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <title>The Fashion Pet</title>
 </head>
+
 <body>
-    <header>
-        <header id="header-container">
-            <div>
-                <h1 id="title-site">The Fashion Pet</h1>
-            </div>
-            <div>
-                <nav id="menu-site">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="register.html">Register</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+    <header id="header-container">
+        <div>
+            <h1 id="title-site">The Fashion Pet</h1>
+        </div>
+        <div>
+            <nav id="menu-site">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main>
         <!---
         Create a form with the inputs: gender, breed, service(Select)
         -->
         <div id="counter"></div>
-        <div id="form">
-            <div id="alertDiv"></div>
-            <h2>REGISTER A NEW PET</h2>
-            <form action="">
-                <div class="mb-3">
-                    <label for="" id="lb-name">Name:</label>
-                    <input type="text" name="name" id="name">
-                </div>
-                <div class="mb-3">
-                    <label for="" id="lb-age">Age:</label>
-                    <input type="text" name="age" id="age">
-                </div>
-                <div class="mb-3">
-                    <label for="" id="lb-gender">Gender:</label>
-                    <input type="text" name="gender" id="gender">
-                </div>
-                <div class="mb-3">
-                    <label for="" id="lb-breed">Breed</label>
-                    <input type="text" name="breed" id="breed">
-                </div>
-                <div class="mb-3">
-                    <label for="">Service</label>
-                    <select name="services" id="services">
-                        <option value="" disabled selected>--Select an option--</option>></option>
-                        <option value="shower">Shower</option>
-                        <option value="grooming">Grooming</option>
-                        <option value="vaccines">Vaccines</option>
-                        <option value="nail">Nail triming</option>
-                    </select>
-                </div>
 
-                <button type="button" class="btn" onclick="register();">Register</button>
-            </form>
+        <div id="add-info-container">
+            <!-- FORM SECTION -->
+            <div id="form">
+                <div id="alertDiv"></div>
+                <h2>REGISTER A NEW PET</h2>
+                <form action="">
+                    <div class="mb-3">
+                        <label for="" id="lb-name">Name:</label><br>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" id="lb-age">Age:</label>
+                        <input type="text" name="age" id="age">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" id="lb-gender">Gender:</label>
+                        <input type="text" name="gender" id="gender">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" id="lb-breed">Breed</label>
+                        <input type="text" name="breed" id="breed">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Service</label>
+                        <select name="services" id="services">
+                            <option value="" disabled selected>--Select an option--</option>></option>
+                            <option value="Shower">Shower</option>
+                            <option value="Grooming">Grooming</option>
+                            <option value="Vaccines">Vaccines</option>
+                            <option value="Nail triming">Nail triming</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn" onclick="register();">Register</button>
+                </form>
+            </div>
+            <!-- SEARCH AND TABLE SECTION -->
+            <div class="search-table">
+                <div class="search-section">
+                    <h4>Search a Pet</h4>
+                    <input type="search" class="bordered" id="txtSearch" placeholder="search a pet" onkeyup="searchPet()">
+                    <button onkeydown="searchPet();">Search</button>
+                </div>
+                <div id="table-container">
+                    <h2>Pets Information</h2>
+                    <table id="table">
+                        <thead id="table-head">
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Breed</th>
+                                <th>Service</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-        <div id="table-container">
-            <table id="table" >
-                <caption>Tabla de clientes</caption>
-                <thead id="table-head">
-                    <tr>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>Gender</th>
-                        <th>Breed</th>
-                        <th>Service</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body">
-    
-                </tbody>
-            </table>
-        </div>
 
-        <div id="pets">
-
+        <!-- Section cads -->
+        <div id="dropdown-container">
+            <div id="div-button">
+                <button onclick="toggleDropdown()">Show Cards</button>
+            </div>
+            <div id="cardsDiv" style="display: none;">
+                <div id="pets">
+                </div>
+            </div>
         </div>
     </main>
     <footer id="footer-container">
@@ -91,5 +115,7 @@
     <script src="Scripts/register.js"></script>
     <script src="Scripts/displayPet.js"></script>
 
+
 </body>
+
 </html>

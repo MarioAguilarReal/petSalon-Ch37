@@ -7,6 +7,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles/mystyles.css">
     <title>The pet fashion</title>
+
+    <style>
+        .featured-services {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+
+        .featured-services h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .service {
+            flex-basis: 30%;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .service img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .service h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff5f52;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,6 +82,32 @@
     </header>
 
     <main id="main-container">
+        <section class="featured-services">
+            <h2>Servicios populares</h2>
+            <div class="services-container">
+                <div class="service">
+                    <img src="img/peluqueria.jpg" alt="Peluquería">
+                    <h3>Peluquería</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis viverra erat et sem lobortis
+                        interdum.</p>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+                <div class="service">
+                    <img src="img/baño.jpg" alt="Baño">
+                    <h3>Baño</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis viverra erat et sem lobortis
+                        interdum.</p>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+                <div class="service">
+                    <img src="img/corte-uñas.jpg" alt="Corte de uñas">
+                    <h3>Corte de uñas</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis viverra erat et sem lobortis
+                        interdum.</p>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+        </section>
 
     </main>
     <footer id="footer-container">
