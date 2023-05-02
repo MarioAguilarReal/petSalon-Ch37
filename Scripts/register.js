@@ -92,7 +92,7 @@ function register(e) {
     //get the values from the inputs
 
     //create the new pet
-    console.log(petSalon.pets.length)
+    //console.log(petSalon.pets.length)
     let newPet = new Pets(petSalon.pets.length, inputName.value, inputAge.value, inputGender.value, inputBreed.value, inputService.value);
     if (isValid(newPet)) {
         //push
@@ -178,13 +178,13 @@ function addAlertCorrect() {
 function addAlertError() {
     //console.log(alertDiv)
 
-    const alertaExito = document.createElement('P');
-    alertaExito.classList.add('red-bar');
-    alertaExito.textContent = 'LLena todos los campos';
-    alertDiv.appendChild(alertaExito);
+    const errorAlert = document.createElement('P');
+    errorAlert.classList.add('red-bar');
+    errorAlert.textContent = 'LLena todos los campos';
+    alertDiv.appendChild(errorAlert);
 
     setTimeout(() => {
-        alertaExito.remove();
+        errorAlert.remove();
     }, 3000)
 }
 function init() {
