@@ -26,9 +26,9 @@ function Pets(id, name, age, gender, breed, service) {
         this.name = name;
     this.age = age;
     this.gender = gender;
-    this.breed = breed;
-    this.service = service;
-}
+        this.breed = breed;
+        this.service = service;
+    }
 //Create the three pets using the constructor
 
 //challenge: cretate three pets using obj lit anonymous with the following properties
